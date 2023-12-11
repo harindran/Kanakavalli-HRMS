@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69537620-6ED6-4193-825F-1893DE5B4188}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HRMS.HRMS.clsModule</StartupObject>
+    <RootNamespace>HRMS</RootNamespace>
+    <AssemblyName>HRMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HRMS.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HRMS.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\SAP\SAP Business One\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Master\CalendarMaster.b1f.vb">
+      <DependentUpon>CalendarMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ESI DeductMaster.b1f.vb">
+      <DependentUpon>ESI DeductMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmAccountMapping.b1f.vb">
+      <DependentUpon>frmAccountMapping.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\FrmHistory.b1f.vb">
+      <DependentUpon>FrmHistory.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="CommonForms\Frmmulitselect.b1f.vb">
+      <DependentUpon>Frmmulitselect.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Events\clsMenuEvent.vb" />
+    <Compile Include="Common\Events\clsRightClickEvent.vb" />
+    <Compile Include="Common\clsModule.vb" />
+    <Compile Include="Common\clsAddon.vb" />
+    <Compile Include="Common\Global Methods\clsGlobalMethods.vb" />
+    <Compile Include="Common\clsTable.vb" />
+    <Compile Include="Common\Global Methods\modGlobalVariables.vb" />
+    <Compile Include="Master\FrmEmpLeaveMaster.b1f.vb">
+      <DependentUpon>FrmEmpLeaveMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmEmployeeMaster.b1f.vb">
+      <DependentUpon>frmEmployeeMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmGeneralSettings.b1f.vb">
+      <DependentUpon>FrmGeneralSettings.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmGLMapping.b1f.vb">
+      <DependentUpon>FrmGLMapping.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmGradeMaster.b1f.vb">
+      <DependentUpon>FrmGradeMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmLeaveMaster.b1f.vb">
+      <DependentUpon>frmLeaveMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmLoanMaster.b1f.vb">
+      <DependentUpon>frmLoanMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmPayElement.b1f.vb">
+      <DependentUpon>frmPayElement.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmShiftMaster.b1f.vb">
+      <DependentUpon>frmShiftMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\FrmSkillMaster.b1f.vb">
+      <DependentUpon>FrmSkillMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ProfTax DeductMaster.b1f.vb">
+      <DependentUpon>ProfTax DeductMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Master\ViewAttendance.b1f.vb">
+      <DependentUpon>ViewAttendance.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Master\frmIDCardMaster.b1f.vb">
+      <DependentUpon>frmIDCardMaster.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmAdditionDeduction.b1f.vb">
+      <DependentUpon>frmAdditionDeduction.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmAirTicketIssue.b1f.vb">
+      <DependentUpon>frmAirTicketIssue.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmDailyAttendance.b1f.vb">
+      <DependentUpon>frmDailyAttendance.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmLeaveApplicaiton.b1f.vb">
+      <DependentUpon>frmLeaveApplicaiton.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmLoanApplication.b1f.vb">
+      <DependentUpon>frmLoanApplication.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmPayrollProcess.b1f.vb">
+      <DependentUpon>frmPayrollProcess.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\frmProvision.b1f.vb">
+      <DependentUpon>frmProvision.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\FrmSettlment.b1f.vb">
+      <DependentUpon>FrmSettlment.b1f</DependentUpon>
+    </Compile>
+    <Compile Include="Transcation\FrmPayrollProcessInINDIA.b1f.vb">
+      <DependentUpon>FrmPayrollProcessInINDIA.b1f</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\Reports\New PaySlip.rpt" />
+    <None Include="Master\CalendarMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\ESI DeductMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\frmAccountMapping.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="CommonForms\FrmHistory.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="CommonForms\Frmmulitselect.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\FrmEmpLeaveMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\frmEmployeeMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Master\FrmGeneralSettings.b1f">
+      <FormCategory>SystemForm</FormCategory>
+    </None>
+    <None Include="Master\FrmGeneralSettings.b1f__orig_srf">
+      <DependentUpon>FrmGeneralSettings.b1f</DependentUpon>
+    </None>
+    <None Include="Master\FrmGLMapping.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\FrmGradeMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\frmLeaveMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\frmLoanMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Master\frmPayElement.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\frmShiftMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\FrmSkillMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\ProfTax DeductMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Master\ViewAttendance.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Reports\Monthly Attendance Report.rpt" />
+    <None Include="Master\frmIDCardMaster.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmAdditionDeduction.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmAirTicketIssue.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmDailyAttendance.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmLeaveApplicaiton.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmLoanApplication.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmPayrollProcess.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\frmProvision.b1f">
+      <FormCategory>UserForm</FormCategory>
+    </None>
+    <None Include="Transcation\FrmSettlment.b1f">
+      <FormCategory>UserForm</FormCategory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Transcation\FrmPayrollProcessInINDIA.b1f">
+      <FormCategory>UserForm</FormCategory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Procedures\LeaveCal.sql" />
+    <Content Include="Procedures\SMS_SP_Employee-wise_End_of_Service.sql" />
+    <Content Include="Procedures\SP_Dropdown_FIlling.sql" />
+    <Content Include="Procedures\SP_HRMS_AirTicket_Issue.sql" />
+    <Content Include="Procedures\SP_HRMS_Common.sql" />
+    <Content Include="Procedures\SP_HRMS_DailyAttendance.sql" />
+    <Content Include="Procedures\SP_HRMS_FinanacePosting.sql" />
+    <Content Include="Procedures\SP_HRMS_LeaveApplication.sql" />
+    <Content Include="Procedures\SP_HRMS_LoanApplication.sql" />
+    <Content Include="Procedures\SP_HRMS_PayrollProcess.sql" />
+    <Content Include="Procedures\SP_HRMS_Provision.sql" />
+    <Content Include="Procedures\SP_HRMS_Settlement.sql" />
+    <Content Include="Procedures\SP_HRMS_StatusUpdate.sql" />
+    <Content Include="Procedures\SP_HRMS_Validations.sql" />
+    <Content Include="Procedures\SP_Standard_Notification.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
